@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+input[type="date"] {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: calc(100% - 1em);
+    box-sizing: border-box;
+}
+
+button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #f50057;
+}
+
+#result {
+    margin-top: 2em;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 10px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.front {
+    background: #ff006a;
+    transform: rotateY(0deg);
+}
+
+.back {
+    background: #73023c;
+    transform: rotateY(180deg);
+}
+
+.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.value {
+    font-size: 2em;
+}
+
+.labels {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+.label {
+    font-size: 1em;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
